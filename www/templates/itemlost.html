@@ -1,0 +1,38 @@
+<ion-view view-title="Lost Item Details">
+  <ion-content class="padding">	
+	<div class="list">
+		<label class="item item-input">
+			<span class="input-label">Item</span>
+			<input type="text" name="itemname">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Description</span>
+			<textarea></textarea>
+		</label>		
+		<label class="item item-input">
+			<span class="input-label">Date</span>
+			<input type="date" name="date">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Contact Person</span>
+			<input type="text" name="subject">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Contact No.</span>
+			<input type="text" name="subject">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Flat No.</span>
+			<input type="text" name="flatno">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Item Image</span>
+			<button class="button button-icon" ng-click="takePicture()"><img ng-model="imageuri" src="img/imageUpload.png" alt=""></button>
+		</label>
+
+		<button class="button button-block button-positive" >
+		  Submit
+		</button>		
+	</div>
+  </ion-content>
+</ion-view>

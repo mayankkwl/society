@@ -1,1 +1,18 @@
 /* Empty. Add your own CSS if you like */
+.login{
+	background-image: url("../img/login-screen.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login h2{
+	color: #ffffff;
+	text-align: center;
+}
+.events .date{
+	font-size: 11px;
+}
+.error{
+	background:#fff;
+	color: #ff0000;
+}

@@ -1,0 +1,37 @@
+<ion-view view-title="Lost & Found">
+  <ion-content class="padding">	
+  	<h4>Did you lost it?</h4>
+	<a class="button button-block button-assertive" href="#/itemlost">
+		Lost  <i class="icon ion-sad"></i>
+	</a>
+	<h4>Did you found it?</h4>
+  	<a class="button button-block button-balanced" href="#/itemfound">
+	  Found  <i class="icon ion-happy"></i>
+	</a>
+	<hr />
+	<ion-list>
+        <div ng-repeat="group in groups">
+          <ion-item class="item-stable"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{group.name}}
+          </ion-item>
+          <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+				<a class="item item-thumbnail-left" href="#">
+		          <img src="{{item.imageURL}}" />
+		          <h2>{{item.itemname}}</h2>
+		          <p>{{item.date}}</p>
+		          <p>{{item.description}}</p>
+		          <p>{{item.contactPerson}}</p>
+		          <p>{{item.contactNo}}</p>
+		          <p>{{item.flatNo}}</p>
+		        </a>
+          </ion-item>
+        </div>
+      </ion-list>
+  </ion-content>
+</ion-view>
